@@ -37,7 +37,7 @@ xapi.event.on('UserInterface Message TextInput Response', (event) => {
         promptForMeetingPasscode();
     } else if (event.FeedbackId === 'microsoft_teams_passcode') {
         passcode = event.Text.trim();
-        const dialString = passcode ? `sips:1&${meetingId}&${passcode}&ww.nyp@m.webex.com` : `sips:1&${meetingId}&ww.nyp@m.webex.com`;
+        const dialString = passcode ? `sips:1&${meetingId}&${passcode}&ww.EXAMPLE@m.webex.com` : `sips:1&${meetingId}&ww.EXAMPLE@m.webex.com`;
         xapi.command('Dial', { Number: dialString });
     }
 });
